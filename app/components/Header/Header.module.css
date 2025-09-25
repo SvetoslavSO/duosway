@@ -1,0 +1,83 @@
+.header { 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  z-index: 170; 
+  border-bottom: 1px solid var(--border); 
+  background: rgba(255,255,255,.8); 
+  backdrop-filter: blur(6px); 
+  color: var(--text);
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .5px; 
+  color: var(--text); 
+  text-decoration: none; 
+}
+.logo span { 
+  color: var(--burgundy); 
+}
+.navDesktop { 
+  display: none; 
+  gap: 24px; 
+}
+.navLink { 
+  color: var(--text); 
+  text-decoration: none; 
+  transition: .2s;
+  font-size: 0.7rem;
+}
+.navLink:hover { 
+  color: var(--burgundy); 
+}
+.burger { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: none; 
+  border: 0; 
+  padding: 8px; 
+}
+.iconBtn { 
+  background: none; 
+  border: 0; 
+  padding: 8px; 
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 64px 0 0 0;
+  min-height: 100dvh;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  z-index: 250;
+  overflow: auto;
+}
+
+.mobileLink { 
+  display: block; 
+  padding: 10px 0; 
+  text-decoration: none; 
+  color: var(--text); 
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.mobileLink:hover { 
+  color: var(--burgundy);
+}
+.backdrop {
+  position: fixed;
+  inset: 64px 0 0 0;                /* начинается под шапкой */
+  background: rgba(0,0,0,.2);
+  z-index: 200;                     /* ниже меню, выше контента */
+}
+.noScroll { overflow: hidden; }
+
+
+
+@media (min-width: 768px) {
+  .navDesktop { display: flex; }
+  .burger { display: none; }
+}

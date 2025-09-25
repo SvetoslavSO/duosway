@@ -1,0 +1,94 @@
+/* контейнер чуть уже, чтобы композиция смотрелась как «галерея» */
+.viewport {
+  position: relative;
+  max-width: min(1100px, 92vw);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* даём выйти соседним слайдам за пределы, чтобы они были видны */
+.swiper {
+  width: 70%;
+  padding-bottom: 28px; /* место под точки */
+  overflow: visible;
+}
+
+/* базовая карточка */
+.slide {
+  transition: transform .4s ease, opacity .4s ease, filter .4s ease, z-index .2s;
+}
+
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  transform: translateZ(0); /* сгладить */
+}
+.card img {
+  width: 100%;
+  display: block;
+  /* aspect-ratio: 3/4; */
+  object-fit: cover;
+}
+.caption {
+  margin-top: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.swiper :global(.swiper-slide) {
+  transform: scale(.9);
+  opacity: .75;
+  filter: saturate(.9);
+  z-index: 1;
+}
+.swiper :global(.swiper-slide-prev),
+.swiper :global(.swiper-slide-next) {
+  transform: scale(.92);
+  opacity: .85;
+  z-index: 2;
+}
+.swiper :global(.swiper-slide-active) {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+.swiper :global(.swiper-slide-active .card) {
+  box-shadow: 0 18px 40px rgba(0,0,0,.12);
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    width: 100%;
+  }
+  .h2{
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper :global(.swiper-slide) {
+    transition: transform .4s ease, opacity .4s ease, filter .4s ease, z-index .2s;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1023px) {
+  
+}
+
+.ctrl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(4px);
+  padding: 8px;
+  border-radius: 999px;
+  display: inline-flex;
+  z-index: 5;
+}
+.left { left: 8px; }
+.right { right: 8px; }

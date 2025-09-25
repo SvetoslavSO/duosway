@@ -1,0 +1,134 @@
+.text { 
+  /* max-width: 70ch;  */
+  font-size: 1rem;
+  text-align:justify;
+  max-width: 90ch;
+}
+.logo { 
+  font-weight: 700; 
+  letter-spacing: .5px; 
+  color: var(--text); 
+  text-decoration: none; 
+}
+.logo span { 
+  color: var(--burgundy); 
+}
+
+/* существующие стили... */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.28);
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  z-index: 220; /* выше хедера и контента */
+}
+
+.modal {
+  width: min(860px, 100%);
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+  padding: 16px;
+  max-height: 100dvh;
+  overflow: auto;
+  font-size: 14px;
+}
+
+.modalHeader { 
+  text-align: center; 
+  margin-bottom: 12px; 
+}
+.modalTitle { 
+  margin: 0; 
+  font-size: 22px; 
+  font-weight: 700; 
+}
+.modalBlock { 
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.modalBody {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.modalPhoto {
+  border-radius: 16px;
+  width: 50%;
+  object-fit: cover;
+  align-self: center;
+  border: 1px solid var(--border);
+}
+.modalText { 
+  margin: 0; 
+  line-height: 1.55; 
+}
+
+.modalActions { 
+  display: flex; 
+  justify-content: center; 
+  margin-top: 12px; 
+}
+.closeBtn {
+  /* border: 1px solid var(--text); */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+  background: #fff;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 8px 14px;
+  transition: .2s;
+}
+.closeBtn:hover { 
+  border-color: var(--burgundy); 
+  color: var(--burgundy); 
+}
+
+/* кнопка в карточке */
+.more {
+  margin-top: 8px;
+  border: 1px solid var(--text);
+  background: #fff;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 8px 12px;
+  transition: .2s;
+}
+.more:hover { 
+  border-color: var(--burgundy); 
+  color: var(--burgundy); 
+}
+
+
+@media (min-width: 360px) {
+  .text{
+    font-size: 1rem;
+    justify-self: center;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .modalPhoto {
+    width: 40%;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+  
+}
+
+
+@media (orientation: landscape) and (max-width: 1023px) {
+  .title{
+    font-size: 1rem;
+  }
+}

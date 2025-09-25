@@ -1,0 +1,166 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 2vw;
+  padding: 2vw;
+  background: #fff;
+  color: #000;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1vh;
+}
+
+.reverse {
+  text-align: right;
+}
+
+.photoWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.photo {
+  height: 25vh;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* .indexBadge {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+} */
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alignLeft { 
+  text-align: left;
+}
+.alignRight { 
+  text-align: right;
+}
+
+.name { 
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600; 
+}
+
+.subtitles {
+  display: none;
+  margin: 0;
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.8;
+  list-style: none;
+}
+
+.subtitlesMini{
+  margin: 0;
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.8;
+  list-style: none;
+}
+
+.highlights {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.quote {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.extra {
+  margin: 1rem 0;
+}
+
+.readMore {
+  margin-top: 1rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #7C203A;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: flex-start;
+}
+
+.reverse .readMore { align-self: flex-end; }
+
+@media (min-width: 400px) {
+  .subtitles{
+    display: block;
+    font-size: 1rem;
+  }
+
+  .photo {
+    height: 200px;
+  }
+
+  .name {
+    font-size: 1.2rem; 
+  }
+
+  .subtitles{
+    font-size: 0.8rem;
+  }
+
+  .subtitlesMini{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .subtitles{
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 1vw;
+  }
+  
+  .quote {
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .card {
+    margin-bottom: 1.75vh;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .photo { width: 120px; height: 160px; }
+  .alignLeft, .alignRight { text-align: center; }
+  .readMore { align-self: center; }
+  .reverse  .readMore{align-self: center;}
+} */
