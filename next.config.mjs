@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/duosway',
+  assetPrefix: '/duosway/',
   trailingSlash: true
 };
 
