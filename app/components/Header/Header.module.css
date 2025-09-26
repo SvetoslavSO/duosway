@@ -69,9 +69,9 @@
 }
 .backdrop {
   position: fixed;
-  inset: 64px 0 0 0;                /* начинается под шапкой */
+  inset: 64px 0 0 0;
   background: rgba(0,0,0,.2);
-  z-index: 200;                     /* ниже меню, выше контента */
+  z-index: 200;
 }
 .noScroll { overflow: hidden; }
 

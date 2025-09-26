@@ -11,17 +11,19 @@ import 'swiper/css/pagination';
 import styles from './Photos.module.css';
 
 const SLIDES = [
-  { id: 1, title: '', image: '/images/2.jpg' },
-  { id: 2, title: '', image: '/images/3.jpg' },
-  { id: 3, title: '', image: '/images/4.jpg' },
-  { id: 4, title: '', image: '/images/5.jpg' },
-  { id: 5, title: '', image: '/images/6.jpg' },
-  { id: 6, title: '«В роли Иоланты. В роли Водемона – Петр Налич (Опера П.И. Чайковского «Иоланта», Московский Оперный Дом)', image: '/images/7.png' },
-  { id: 7, title: '', image: '/images/8.png' },
-  { id: 8, title: '', image: '/images/9.jpg' },
-  { id: 9, title: '', image: '/images/10.png' },
-  { id: 10, title: '', image: '/images/11.jpg' },
-  { id: 11, title: '«В роли Квазимодо (Мюзикл «Notre Dam de Paris», Крокус Сити Холл)', image: '/images/12.jpg' },
+  { id: 1, title: '', image: './images/2.jpg' },
+  { id: 2, title: '', image: './images/3.jpg' },
+  { id: 3, title: '', image: './images/4.jpg' },
+  { id: 4, title: '', image: './images/5.jpg' },
+  { id: 5, title: '', image: './images/6.jpg' },
+  { id: 6, title: '«В роли Иоланты. В роли Водемона – Петр Налич (Опера П.И. Чайковского «Иоланта», Московский Оперный Дом)', image: './images/7.png' },
+  { id: 7, title: '', image: './images/8.png' },
+  { id: 8, title: '', image: './images/9.jpg' },
+  { id: 9, title: '', image: './images/10.png' },
+  { id: 10, title: '', image: './images/11.jpg' },
+  { id: 11, title: '«В роли Квазимодо (Мюзикл «Notre Dam de Paris», Крокус Сити Холл)', image: './images/12.jpg' },
+  { id: 12, title: '', image: './images/13.jpg'},
+  { id: 13, title: '', image: './images/14.jpg'},
 ];
 
 export default function PhotosSlider() {

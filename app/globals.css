@@ -7,8 +7,8 @@
   --container: 1200px;
   --radius: 16px;
   --header-h: 64px;
-  --curtain-final: 10px;      /* конечная ширина поля */
-  --curtain-line: 3px;        /* толщина линии */
+  --curtain-final: 10px;
+  --curtain-line: 3px;
   --curtain-dur: 1.3s;
 }
 
@@ -21,7 +21,6 @@ html {
   scroll-behavior: auto;
 }
 
-/* Контейнер, внутри которого листаем секции */
 #snap {
   height: 100dvh;
   overflow-y: auto;
@@ -31,25 +30,13 @@ html {
   touch-action: none;
 }
 
-/*new*/
-
 .modal-open, .modal-open body {
-  overflow: hidden;            /* на всякий случай */
+  overflow: hidden;
 }
 
-/* .modal-open #snap {
-  overflow: hidden !important;
-  pointer-events: none;
-  touch-action: none !important;
-  scroll-snap-type: none;
-} */
-
-/* На время программной прокрутки отключаем снап, чтобы не бодаться с браузером */
 #snap.scrolling {
   scroll-snap-type: none;
 }
-
-/* bg  541d27 */
 
 * { box-sizing: border-box; }
 body { 
@@ -111,7 +98,6 @@ button, a { cursor: pointer; }
   pointer-events: none;
 }
 
-/* левая */
 .curtainLeft {
   left: 0;
   animation-name: curtainOpenLeft;
@@ -121,13 +107,12 @@ button, a { cursor: pointer; }
   position: absolute;
   z-index:150;
   top: 0;
-  right: 0;                   /* линия у правого края левой шторки */
+  right: 0;
   width: var(--curtain-line);
   height: 100%;
   background: var(--burgundy);
 }
 
-/* правая */
 .curtainRight {
   right: 0;
   animation-name: curtainOpenRight;
@@ -137,13 +122,12 @@ button, a { cursor: pointer; }
   position: absolute;
   z-index:150;
   top: 0;
-  left: 0;                    /* линия у левого края правой шторки */
+  left: 0;
   width: var(--curtain-line);
   height: 100%;
   background: #000;
 }
 
-/* анимации */
 @keyframes curtainOpenLeft {
   from { width: 50vw; }
   to   { width: var(--curtain-final); }
@@ -175,8 +159,6 @@ img { display: block; max-width: 100%; height: auto; }
 }
 @keyframes slideLeft { from { transform: translateX(0); } to { transform: translateX(-100%); } }
 @keyframes slideRight { from { transform: translateX(0); } to { transform: translateX(100%); } }
-/* .shutterLeft  { position: absolute; inset: 0 auto 0 0; width: 50%; background: #fff; animation: slideLeft 1.2s ease-in-out forwards; }
-.shutterRight { position: absolute; inset: 0 0 0 auto; width: 50%; background: #fff; animation: slideRight 1.2s ease-in-out .15s forwards; } */
 
 .grid { display: grid; gap: 16px; }
 .gridCols2 { grid-template-columns: 1fr; }

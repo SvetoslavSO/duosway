@@ -1,15 +1,13 @@
-/* делаем секцию колонкой на полный экран */
+
 .wrap {
   display: flex;
   flex-direction: column;
-  /* min-height: 100dvh; */
 }
 .mail{
   text-decoration: none;
   color: #000;
   font-weight: bold;
 }
-/* основная часть по центру */
 .content {
   flex: 1;
   display: flex;
@@ -39,7 +37,6 @@
   width: 40px;
   background: rgba(0, 0, 0, 0.1);
 }
-/* футер притянут к низу */
 .footer {
   border-top: 1px solid var(--border);
   padding: 24px 0;

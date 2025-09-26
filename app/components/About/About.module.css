@@ -1,5 +1,4 @@
-.text { 
-  /* max-width: 70ch;  */
+.text {
   font-size: 1rem;
   text-align:justify;
   max-width: 90ch;
@@ -14,7 +13,6 @@
   color: var(--burgundy); 
 }
 
-/* существующие стили... */
 
 .backdrop {
   position: fixed;
@@ -23,7 +21,7 @@
   display: grid;
   place-items: center;
   padding: 24px 16px;
-  z-index: 220; /* выше хедера и контента */
+  z-index: 220;
 }
 
 .modal {
@@ -78,7 +76,6 @@
   margin-top: 12px; 
 }
 .closeBtn {
-  /* border: 1px solid var(--text); */
   box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
   background: #fff;
   color: var(--text);
@@ -91,7 +88,6 @@
   color: var(--burgundy); 
 }
 
-/* кнопка в карточке */
 .more {
   margin-top: 8px;
   border: 1px solid var(--text);

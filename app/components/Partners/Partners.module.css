@@ -6,14 +6,6 @@
   font-size: 1.5rem;
   text-align: center;
 }
-
-/* Цифры */
-/* .stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  margin-bottom: 28px;
-} */
 .stat {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -30,7 +22,6 @@
   font-size: 14px;
 }
 
-/* Группы бейджей */
 .group { 
   margin: 0;
 }
@@ -57,7 +48,6 @@
   background: #fff;
 }
 
-/* Кейсы */
 .cases {
   display: grid; 
   display: none;
@@ -86,7 +76,6 @@
 .quote { margin: 0; font-style: italic; }
 .quoteMeta { color: var(--muted); margin-top: 4px; font-size: 13px; }
 
-/* Дисклеймер */
 .note {
   margin-top: 10px;
   color: var(--muted);
@@ -97,7 +86,6 @@
 
 }
 
-/* планшет/десктоп */
 @media (min-width: 768px) {
   .cases {
     display: grid;

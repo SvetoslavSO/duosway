@@ -6,8 +6,8 @@ import ArtistCard from '../ArtistCard/ArtistCard';
 const artists = [
   {
     index: 1,
-    photo: '/images/2.jpg',
-    extraPhoto: '/images/4.jpg', // можно другую фотку
+    photo: './images/2.jpg',
+    extraPhoto: './images/4.jpg',
     name: 'Яна Федорова',
     subtitles: [
       'Певица, актриса музыкального театра',
@@ -24,8 +24,8 @@ const artists = [
   },
   {
     index: 2,
-    photo: '/images/3.jpg',
-    extraPhoto: '/images/11.jpg',
+    photo: './images/3.jpg',
+    extraPhoto: './images/11.jpg',
     name: 'Владислав Шавров',
     subtitles: [
       'Певец, актёр музыкального театра',
@@ -43,9 +43,8 @@ const artists = [
 ];
 
 export default function About() {
-  const [openArtist, setOpenArtist] = useState(null); // {index, name, extra, extraPhoto} | null
+  const [openArtist, setOpenArtist] = useState(null);
 
-  // блокируем скролл фона при открытой модалке
   useEffect(() => {
     const root = document.documentElement;
     if (openArtist) root.classList.add('modal-open');

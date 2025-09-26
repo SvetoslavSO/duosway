@@ -1,5 +1,4 @@
 import styles from './Videos.module.css';
-// import ReactPlayer from 'react-player';
 
 export default function Events() {
   const cards = [

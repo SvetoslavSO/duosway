@@ -10,9 +10,7 @@ export default function WelcomePage() {
             <h1 className="h1">DUO <span className={styles.accent}>SWAY</span></h1>
             <div className={styles.textMuted}>яркий дуэт первоклассных вокалистов, создающий неповторимое настроение</div>
           </div>
-            <img src="/images/1.jpg" alt="WelcomePagePhoto" className={styles.welcomeImage} />
-            {/* <div className="shutterLeft" />
-            <div className="shutterRight" /> */}
+            <img src="./images/1.jpg" alt="WelcomePagePhoto" className={styles.welcomeImage} />
           </div>
         </div>
       </div>

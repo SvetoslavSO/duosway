@@ -15,7 +15,6 @@ export default function FullPageScroll() {
     const sections = Array.from(container.querySelectorAll('.section'));
     if (!sections.length) return;
 
-    // Поддерживается ли scrollend
     usingScrollEndRef.current = ('onscrollend' in container);
 
     const finishScroll = () => {
@@ -55,7 +54,6 @@ export default function FullPageScroll() {
 
     const onWheel = (e) => {
       if (document.documentElement.classList.contains('modal-open')) return;
-      // if (e.target.closest('[data-scrollable="true"]')) return;
 
       if (e.cancelable) e.preventDefault();
       if (lockRef.current) return;
@@ -75,7 +73,6 @@ export default function FullPageScroll() {
 
     const onTouchMove = (e) => {
       if (document.documentElement.classList.contains('modal-open')) return;
-      // if (e.target.closest('[data-scrollable="true"]')) return;
       if (e.cancelable && !lockRef.current) e.preventDefault();
     };
 

@@ -14,7 +14,6 @@ import Reviews from './components/Reviews/Reviews';
 export default function Page() {
   return (
     <div>
-      {/* Занавески под хедером */}
       <div className="curtain curtainLeft" aria-hidden />
       <div className="curtain curtainRight" aria-hidden />
 
