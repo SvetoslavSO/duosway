@@ -4,12 +4,12 @@ export default function Events() {
   const cards = [
     {
       id: 1,
-      src: '/videos/video2.mp4',
+      src: './videos/video2.mp4',
       title: 'с программой "Jazz Gospel Blues"',
     },
     {
       id: 2,
-      src: '/videos/video1.mp4',
+      src: './videos/video1.mp4',
       title: 'и Президентский оркестр РФ',
     }
   ]
