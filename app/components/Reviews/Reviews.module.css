@@ -79,17 +79,24 @@
   top: 46%;
   transform: translateY(-50%);
   border: 1px solid var(--border);
-  background: rgba(255,255,255,.9);
+  background: rgba(255,255,255,1);
   backdrop-filter: blur(6px);
   padding: 8px;
   border-radius: 999px;
-  display: inline-flex;
-  z-index: 5;
+  display: none;
+  z-index: 10;
   cursor: pointer;
-  transition: background .2s ease;
+  transition: background .4s ease;
 }
+
 .ctrl:hover {
-  background: rgba(255,255,255,1);
+  background: rgba(200,200,200,.2);
+}
+
+@media (min-width: 1200px) {
+  .ctrl{
+    display: inline-flex;
+  }
 }
 .left { left: 8px; }
 .right { right: 8px; }

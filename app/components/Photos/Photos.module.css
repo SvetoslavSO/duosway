@@ -56,12 +56,38 @@
   box-shadow: 0 18px 40px rgba(0,0,0,.12);
 }
 
+
+.ctrl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,1);
+  backdrop-filter: blur(6px);
+  padding: 8px;
+  border-radius: 999px;
+  display: none;
+  z-index: 10;
+  cursor: pointer;
+  transition: background .4s ease;
+}
+
+.ctrl:hover {
+  background: rgba(200,200,200,.2);
+}
+
 @media (min-width: 768px) {
   .swiper {
     width: 100%;
   }
   .h2{
     margin-top: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ctrl{
+    display: inline-flex;
   }
 }
 
@@ -73,19 +99,6 @@
 
 @media (orientation: landscape) and (max-width: 1023px) {
   
-}
-
-.ctrl {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.8);
-  backdrop-filter: blur(4px);
-  padding: 8px;
-  border-radius: 999px;
-  display: inline-flex;
-  z-index: 5;
 }
 .left { left: 8px; }
 .right { right: 8px; }

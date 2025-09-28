@@ -36,26 +36,27 @@ export default function PhotosSlider() {
         <h2 className="h2">Фото</h2>
 
         <div className={styles.viewport}>
-          <button ref={prevRef} className={`${styles.ctrl} ${styles.left}`} aria-label="Назад">
+          <div ref={prevRef} className={`${styles.ctrl} ${styles.left}`} aria-label="Назад">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </button>
-          <button ref={nextRef} className={`${styles.ctrl} ${styles.right}`} aria-label="Вперёд">
+          </div>
+          <div ref={nextRef} className={`${styles.ctrl} ${styles.right}`} aria-label="Вперёд">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </button>
+          </div>
 
           <Swiper
             className={styles.swiper}
             modules={[Navigation, Pagination, Mousewheel, A11y]}
             loop
+            loopAdditionalSlides={2}
             speed={500}
             centeredSlides
             slidesPerView={1}
             spaceBetween={12}
-            pagination={{ clickable: true }}
+            pagination={{ clickable: true, dynamicBullets: false, type: 'bullets'  }}
             navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
             mousewheel={{
               forceToAxis: true,
